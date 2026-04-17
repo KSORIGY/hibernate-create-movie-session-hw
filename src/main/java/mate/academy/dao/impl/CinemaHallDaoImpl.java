@@ -42,7 +42,7 @@ public class CinemaHallDaoImpl implements CinemaHallDao {
                 .openSession()) {
             return Optional.ofNullable(session.get(CinemaHall.class, id));
         } catch (Exception e) {
-            throw new DataProcessingException("Can`t Cinema Hall from DB by id: " + id, e);
+            throw new DataProcessingException("Can`t get Cinema Hall by id: " + id, e);
         }
     }
 
